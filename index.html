@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exportable — Export any table to CSV, Excel & Clipboard</title>
+  <meta name="description" content="Free Chrome extension: export any web table to CSV, Excel or your clipboard in one click. Unlimited rows, no sign-up, 100% local." />
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1f2937; --muted: #6b7280; --border: #e5e7eb;
+      --accent: #10b981; --accent-fg: #ffffff; --card: #f9fafb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111827; --fg: #f3f4f6; --muted: #9ca3af; --border: #374151; --card: #1f2937; }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body { font: 17px/1.6 system-ui, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    header.hero { text-align: center; padding: 72px 0 48px; }
+    .logo { width: 72px; height: 72px; border-radius: 16px; background: var(--accent); display: inline-block; position: relative; margin-bottom: 20px; }
+    .logo::after { content: ""; position: absolute; inset: 16px;
+      background:
+        linear-gradient(#fff, #fff) top / 100% 22% no-repeat,
+        linear-gradient(90deg, transparent 44%, #fff 44%, #fff 56%, transparent 56%) bottom / 100% 70% no-repeat,
+        linear-gradient(transparent 44%, #fff 44%, #fff 56%, transparent 56%) bottom / 100% 70% no-repeat; }
+    h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 12px; }
+    .sub { color: var(--muted); font-size: 1.15rem; max-width: 560px; margin: 0 auto 28px; }
+    .cta { display: inline-block; background: var(--accent); color: var(--accent-fg); font-weight: 700;
+      padding: 14px 28px; border-radius: 10px; text-decoration: none; font-size: 1.05rem; }
+    .cta:hover { filter: brightness(1.08); }
+    .cta-sub { display: block; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+    section { padding: 36px 0; }
+    h2 { font-size: 1.5rem; margin-bottom: 18px; text-align: center; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+    .card h3 { font-size: 1.02rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+    table.pricing { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .pricing th, .pricing td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+    .pricing th:nth-child(2), .pricing td:nth-child(2),
+    .pricing th:nth-child(3), .pricing td:nth-child(3) { text-align: center; }
+    .pricing .yes { color: var(--accent); font-weight: 700; }
+    .pro-cta { text-align: center; margin-top: 20px; }
+    .pro-cta a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; padding: 28px 0 48px; text-align: center; }
+    footer a { color: var(--muted); }
+    .privacy-banner { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px; text-align: center; color: var(--muted); }
+    .privacy-banner strong { color: var(--fg); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Export any table.<br />Pay for none of it.</h1>
+      <p class="sub">Exportable turns any table on any webpage into CSV, Excel or
+      clipboard data in one click. Unlimited rows, free.</p>
+      <a class="cta" href="STORE_URL_HERE">Add to Chrome — Free</a>
+      <span class="cta-sub">No account · No sign-up · 15&nbsp;KB</span>
+    </header>
+
+    <section>
+      <div class="privacy-banner">
+        <strong>100% local by design.</strong> Your data never leaves your browser —
+        no cloud, no analytics, no tracking. The extension only runs on the tab
+        you click it on.
+      </div>
+    </section>
+
+    <section>
+      <h2>What it does</h2>
+      <div class="features">
+        <div class="card"><h3>Copy for Excel &amp; Sheets</h3><p>One click, then paste. Columns land exactly where they should — merged cells included.</p></div>
+        <div class="card"><h3>Unlimited CSV downloads</h3><p>No row caps, ever. A 10,000-row table exports the same as a 10-row one.</p></div>
+        <div class="card"><h3>Finds every table</h3><p>Real tables, ARIA tables, and CSS-grid tables that other tools miss. Batch-download them all.</p></div>
+        <div class="card"><h3>Markdown too</h3><p>Copy any table as a Markdown table for docs, GitHub, or your notes app.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Free vs Pro</h2>
+      <table class="pricing">
+        <tr><th></th><th>Free</th><th>Pro — $19 once</th></tr>
+        <tr><td>Copy / CSV / Markdown, unlimited rows</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Batch download all tables</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Direct .xlsx (Excel) download</td><td>—</td><td class="yes">✓</td></tr>
+        <tr><td>Multi-page capture (paginated tables)</td><td>—</td><td class="yes">✓</td></tr>
+        <tr><td>Load all rows (infinite scroll)</td><td>—</td><td class="yes">✓</td></tr>
+        <tr><td>Subscription</td><td>Never</td><td>Never</td></tr>
+      </table>
+      <p class="pro-cta"><a href="https://growthguide3.gumroad.com/l/exportable-pro">Get Exportable Pro — $19, yours forever →</a></p>
+    </section>
+
+    <footer>
+      <p>Questions or a table it can't handle? <a href="mailto:growthcoachtools@gmail.com">growthcoachtools@gmail.com</a></p>
+      <p><a href="privacy-policy.html">Privacy policy</a></p>
+    </footer>
+  </div>
+</body>
+</html>
